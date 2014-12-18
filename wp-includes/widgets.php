@@ -996,6 +996,7 @@ function dynamic_sidebar($index = 1) {
 
 	$did_one = false;
 	foreach ( (array) $sidebars_widgets[$index] as $id ) {
+		if ($GLOBALS['cat'] != 13 && strpos($index, 'categories') !== false) continue;
 
 		if ( !isset($wp_registered_widgets[$id]) ) continue;
 
@@ -1050,6 +1051,8 @@ function dynamic_sidebar($index = 1) {
 		$params = apply_filters( 'dynamic_sidebar_params', $params );
 
 		$callback = $wp_registered_widgets[$id]['callback'];
+		// my change
+		if ($callback[0]->id_base == 'categories' && $GLOBALS['cat'] != 13) continue;
 
 		/**
 		 * Fires before a widget's display callback is called.

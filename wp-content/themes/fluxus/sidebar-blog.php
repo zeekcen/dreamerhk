@@ -20,8 +20,9 @@
                             <h1 class="title">&ldquo;<?php echo get_search_query(); ?>&rdquo;</h1>
                         </hgroup><?php
                     endif;
-
-                    if ( is_archive() ) : ?>
+		    // my change
+                    //if ( is_archive() ) :
+                    if ( 0 && is_archive() ) : ?>
 
                         <hgroup class="archive-results-hgroup">
                             <h2 class="subtitle"><?php

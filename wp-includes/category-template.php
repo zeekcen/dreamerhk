@@ -854,6 +854,10 @@ function walk_category_tree() {
 		$walker = new Walker_Category;
 	else
 		$walker = $args[2]['walker'];
+	// my change
+	foreach ($args[0] as $key=>$val) {
+		if ($args[0][$key]->cat_ID != 13 && $args[0][$key]->category_parent == 0) unset($args[0][$key]);
+	}
 
 	return call_user_func_array(array( &$walker, 'walk' ), $args );
 }
