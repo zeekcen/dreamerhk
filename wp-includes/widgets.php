@@ -1052,7 +1052,7 @@ function dynamic_sidebar($index = 1) {
 
 		$callback = $wp_registered_widgets[$id]['callback'];
 		// my change
-		if ($callback[0]->id_base == 'categories' && $GLOBALS['cat'] != 13) continue;
+		if ($callback[0]->id_base == 'categories' && ($GLOBALS['cat'] == 12) || $GLOBALS['cat'] == 1) continue;
 
 		/**
 		 * Fires before a widget's display callback is called.

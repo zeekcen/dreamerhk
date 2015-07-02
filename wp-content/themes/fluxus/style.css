@@ -2797,7 +2797,7 @@ img.size-full {
 	.fluxus-project-types a,
 	.entry-tags a {
 	    color: #ccc;
-	    text-transform: lowercase;
+	/*    text-transform: lowercase;*/
 		text-decoration: none;
 	    margin: 0 5px 0 0;
 	    border-bottom: 0 none;

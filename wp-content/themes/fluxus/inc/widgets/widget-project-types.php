@@ -26,7 +26,7 @@ class Fluxus_Widget_Project_Types extends WP_Widget {
             );
 
         //$this->WP_Widget( 'fluxus-project-types-widget', __( 'Project Types', 'fluxus' ), $widget_ops, $control_ops );
-        $this->WP_Widget( 'fluxus-project-types-widget', __( '婚拍类型', 'fluxus' ), $widget_ops, $control_ops );
+        $this->WP_Widget( 'fluxus-project-types-widget', __( 'Pre-wedding', 'fluxus' ), $widget_ops, $control_ops );
     }
 
     function widget( $args, $instance ) {
@@ -52,7 +52,7 @@ class Fluxus_Widget_Project_Types extends WP_Widget {
 
                 echo $args['before_widget'];
                 //echo $args['before_title'] . __( 'Project Type', 'fluxus' ) . $args['after_title'];
-                echo $args['before_title'] . __( '婚拍类型', 'fluxus' ) . $args['after_title'];
+                echo $args['before_title'] . __( 'Pre-wedding', 'fluxus' ) . $args['after_title'];
 
                 ?>
                 <ul><?php
@@ -71,7 +71,7 @@ class Fluxus_Widget_Project_Types extends WP_Widget {
             $active_tag = false;
             $children = false;
 
-            $widget_title = __( '婚拍类型', 'fluxus' );
+            $widget_title = __( 'Pre-wedding', 'fluxus' );
 
             if ( $active_tag_slug ) {
                 $active_tag = get_term_by( 'slug', $active_tag_slug, 'fluxus-project-type' );
